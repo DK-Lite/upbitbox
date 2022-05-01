@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ## Get Started (Example)
 ```python
 import yaml
-import pyupbit
+import upbitbox
 
 def get_config():
     with open(r'config.yaml', encoding='UTF-8') as f:
@@ -26,12 +26,12 @@ if __name__ == "__main__":
     config = get_config()
 
     # Quotaion
-    print(pyupbit.markets().head())
-    print(pyupbit.candles(1, "KRW-BTC", count=10).head())
-    print(pyupbit.orderbook("KRW-BTC").head())
+    print(upbitbox.markets().head())
+    print(upbitbox.candles(1, "KRW-BTC", count=10).head())
+    print(upbitbox.orderbook("KRW-BTC").head())
 
     # Exchange
-    upbit = pyupbit.create_upbit(**config['upbit'])
+    upbit = upbitbox.create_upbit(**config['upbit'])
     print(upbit.accounts())
 ```
 ```cmd
