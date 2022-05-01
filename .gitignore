@@ -1,0 +1,10 @@
+__pycache__/
+*.xlsx
+*.json
+*.pem
+*.ppk
+*.ini
+*.log
+
+.venv/
+.vscode/
